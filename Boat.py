@@ -10,7 +10,8 @@ class Boat():
         self.type = type
         self.startposition = startposition
         self.endposition = endposition
-        self.squares = []
+        self.originals_squares = []
+        self.left_squares = []
         self.gameover = gameover
 
 
