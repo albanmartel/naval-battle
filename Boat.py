@@ -6,6 +6,13 @@ from dataclasses import dataclass
 
 @dataclass
 class Boat():
+    boats = []
+
+    @classmethod
+    def nb_boats(cls):
+        return len(cls.boats())
+
+
     def __init__(self, type, startposition, endposition, gameover):
         self.type = type
         self.startposition = startposition
@@ -13,5 +20,5 @@ class Boat():
         self.originals_squares = []
         self.left_squares = []
         self.gameover = gameover
-
+        Boat.boats.append(self)
 
