@@ -5,6 +5,15 @@ from typing import ClassVar
 from dataclasses import dataclass
 import Boat
 
+##### Les Constantes ######
+boats_coordoodinates = (
+    ("B2", "B2"),
+    ("A4", "A7"),
+    ("C5", "C7"),
+    ("H5", "J5"),
+    ("E9", "F9"),
+)
+
 @dataclass
 class NavalBattle():
     def __init__(self, size, boats, turn, gameover):
