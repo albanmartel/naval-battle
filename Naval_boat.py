@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import Boat
 
 @dataclass
-class NavalBattle():
+class Naval_battle():
     ##### Les Constantes ######
     boats_coordinates = (
         ("B2", "B2"),
@@ -18,7 +18,7 @@ class NavalBattle():
 
     def __init__(self, size, boats):
         self.size = size
-        for elem in self.boats_coordinates
+        for elem in self.boats_coordinates:
             boat = Boat.Boat(elem[0], elem[1])
         self.boats = boat.get_boats()
         self.turn = 0
