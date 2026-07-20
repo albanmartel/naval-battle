@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 #-*-coding: utf-8 -*/-
 
-from typing import ClassVar
 from dataclasses import dataclass
-import Boat
 
 @dataclass
 class Positions():
