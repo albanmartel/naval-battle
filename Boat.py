@@ -3,6 +3,7 @@
 
 from typing import ClassVar
 from dataclasses import dataclass
+from Positions import Positions
 
 @dataclass
 class Boat():
@@ -14,11 +15,11 @@ class Boat():
 
 
     def __init__(self, type, startposition, endposition, gameover):
+        positions = Positions(startposition, endposition)
         self.type = type
         self.startposition = startposition
         self.endposition = endposition
-        self.originals_squares = []
-        self.left_squares = []
-        self.gameover = gameover
+        self.originals_squares = positions.terminate_squares()
+        self.left_squares = positions.terminate_squares()
         Boat.boats.append(self)
 
