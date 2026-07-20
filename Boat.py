@@ -7,7 +7,7 @@ from Positions import Positions
 
 @dataclass
 class Boat():
-    boats = []
+    boats: ClassVar[list[Boat]] = []
 
     @classmethod
     def nb_boats(cls):
