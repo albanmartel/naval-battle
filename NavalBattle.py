@@ -5,19 +5,21 @@ from typing import ClassVar
 from dataclasses import dataclass
 import Boat
 
-##### Les Constantes ######
-boats_coordoodinates = (
-    ("B2", "B2"),
-    ("A4", "A7"),
-    ("C5", "C7"),
-    ("H5", "J5"),
-    ("E9", "F9"),
-)
-
 @dataclass
 class NavalBattle():
-    def __init__(self, size, boats, turn, gameover):
+    ##### Les Constantes ######
+    boats_coordinates = (
+        ("B2", "B2"),
+        ("A4", "A7"),
+        ("C5", "C7"),
+        ("H5", "J5"),
+        ("E9", "F9"),
+    )
+
+    def __init__(self, size, boats):
         self.size = size
-        self.boats = boats
-        self.turn = turn
+        for elem in self.boats_coordinates
+            boat = Boat.Boat(elem[0], elem[1])
+        self.boats = boat.get_boats()
+        self.turn = 0
         self.gameover = False
