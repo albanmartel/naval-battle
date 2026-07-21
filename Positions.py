@@ -38,11 +38,11 @@ class Positions():
         :return: un tableau de cases de bâteau
         """
         position = self.separate_letters_digits(self.startposition)
-        letters_1 = position[0]
-        numbers_1 = position[1]
+        letters_1 = position[0][0]
+        numbers_1 = position[1][0]
         position = self.separate_letters_digits(self.endposition)
-        letters_2 = position[0]
-        numbers_2 = position[1]
+        letters_2 = position[0][0]
+        numbers_2 = position[1][0]
 
         squares = []
         if letters_1 == letters_2:
@@ -55,9 +55,9 @@ class Positions():
         if numbers_1 == numbers_2:
             if ord(letters_1) < ord(letters_2):
                 for idx in range(ord(letters_1), ord(letters_2) + 1):
-                    squares.append(chr(idx) + str(number))
+                    squares.append(chr(idx) + numbers_1)
             elif ord(letters_1) > ord(letters_2):
                 for idx in range(ord(letters_2), ord(letters_1) + 1):
-                    squares.append(chr(idx) + str(number))
+                    squares.append(chr(idx) + numbers_1)
 
         return squares
