@@ -23,3 +23,20 @@ class Boat():
         self.left_squares = self.originals_squares
         Boat.boats.append(self)
 
+    @property
+    def originals_squares(self):
+        return self._originals_squares
+
+    @property
+    def type(self):
+        return self._type
+
+    @originals_squares.setter
+    def originals_squares(self, squares):
+        self._originals_squares =  squares
+
+
+    @type.setter
+    def type(self, value):
+        self._type = value
+
