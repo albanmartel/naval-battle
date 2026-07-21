@@ -10,8 +10,8 @@ class Boat():
     boats: ClassVar[list[Boat]] = []
 
     @classmethod
-    def nb_boats(cls):
-        return len(cls.boats())
+    def get_boats(cls):
+        return cls.boats
 
 
     def __init__(self, type, startposition, endposition, gameover):
