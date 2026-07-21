@@ -30,7 +30,6 @@ class Positions():
         return letters, numbers
 
 
-    @staticmethod
     def determinate_squares(self) -> tuple:
         """
         fonction determinate_squares(self)
