@@ -19,7 +19,7 @@ class Boat():
         self.type = type
         self.startposition = startposition
         self.endposition = endposition
-        self.originals_squares = positions.terminate_squares()
-        self.left_squares = positions.terminate_squares()
+        self.originals_squares = positions.determinate_squares()
+        self.left_squares = self.originals_squares
         Boat.boats.append(self)
 
