@@ -2,9 +2,10 @@
 #-*-coding: utf-8 -*/-
 import Naval_battle
 
-def main():
+def main()-> None:
     bataille_navale = Naval_battle.Naval_battle(10)
 
 
 if __name__ == "__main__":
+    print("Jeu de la bataille navale")
     main()
