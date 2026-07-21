@@ -9,17 +9,17 @@ import Boat
 class Naval_battle():
     ##### Les Constantes ######
     boats_coordinates = (
-        ("B2", "B2"),
-        ("A4", "A7"),
-        ("C5", "C7"),
-        ("H5", "J5"),
-        ("E9", "F9"),
+        ("aircraft carrier", "B2", "B2"),
+        ("cruiser", "A4", "A7"),
+        ("destroyer", "C5", "C7"),
+        ("submarine", "H5", "J5"),
+        ("torpedo_boat", "E9", "F9"),
     )
 
-    def __init__(self, size, boats):
+    def __init__(self, size):
         self.size = size
         for elem in self.boats_coordinates:
-            boat = Boat.Boat(elem[0], elem[1])
+            boat = Boat.Boat(elem[0], elem[1], elem[2], False)
         self.boats = boat.get_boats()
         self.turn = 0
         self.gameover = False
